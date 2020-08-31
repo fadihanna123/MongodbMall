@@ -1,0 +1,19 @@
+{
+  "name": "reactapi",
+  "version": "1.0.0",
+  "description": "Simple ReactAPI",
+  "main": "server.js",
+  "author": "Fadi Hanna",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "*",
+    "express": "*",
+    "mongoose": "*",
+    "nodemon": "*",
+    "open-cli": "^6.0.1",
+    "path": "*"
+  },
+  "scripts": {
+    "start": "open-cli http://localhost:5000/users && nodemon server.js"
+  }
+}
