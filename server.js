@@ -19,7 +19,6 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
 const Users = require("./models/model.js");
-const { findOneAndUpdate } = require("./models/model.js");
 
 server.get("/users", async (req, res) => {
   const getlist = await Users.find({});
