@@ -16,7 +16,6 @@ server.js<br />
 yarn.lock<br />
 ### 1.3 Installation:
 Du behöver skapa Mongodb databas som kallas "users" och collection "users". <br />
-Du behöver skapa dessa kolumner i dessa tabeller :<br />
 **Modellen:**<br />
    `fullname` String <br />
   `username` String <br />
