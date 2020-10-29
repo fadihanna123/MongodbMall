@@ -6,7 +6,7 @@ Kör <br />
 för att installera alla paket och starta projektet. 
 <br />
 Projektet finns i <br />
-http://localhost:5000 <br />
+http://localhost:5000/ <br />
 ### 1.2 Mappstruktur
 src/<br>
 src/styles/global.js<br>
