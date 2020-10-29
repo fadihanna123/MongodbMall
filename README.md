@@ -25,7 +25,7 @@ Du behöver skapa Mongodb databas som kallas "users" och collection "users". <br
 
 ### 1.4 Exempel för att visa data:
 http://localhost:5000/users <br />
-Den visar alla data som lagras i databasen.
+Den visar alla data som lagras i databasen.<br />
 **Exempel för att lägga till data:**<br />
 http://localhost:5000/users <br />
 Observera att du måste lägga i body vissa data för att de ska läggas till. <br />
