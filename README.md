@@ -4,11 +4,9 @@ Den här är Mongodb uppstart för att bygga stora Mongodb projekt. Du kan anvä
 Kör <br />
 `yarn --emoji && yarn upgrade -latest --emoji && yarn start --emoji` <br>
 för att installera alla paket och starta projektet. 
-<br>
-Projektet finns i <br>
-http://localhost:3000 <br>
-`yarn build`<br>
-För att bygga projektet i statisk form och är redo för publicering.<br>
+<br />
+Projektet finns i <br />
+http://localhost:5000 <br />
 ### 1.2 Mappstruktur
 src/<br>
 src/styles/global.js<br>
