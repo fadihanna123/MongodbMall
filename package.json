@@ -8,8 +8,8 @@
   "dependencies": {
     "cors": "*",
     "express": "*",
-    "mongoose": "*",
-    "nodemon": "*",
+    "mongoose": "5.10.14",
+    "nodemon": "2.0.6",
     "open-cli": "^6.0.1",
     "path": "*"
   },
