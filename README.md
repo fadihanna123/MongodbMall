@@ -18,7 +18,7 @@ models/model.js<br />
 README.md<br />
 package.json<br />
 server.js<br />
-yarn.lock<br />
+pnpm-lock.yaml<br />
 
 ### 1.3 Installation:
 
