@@ -69,5 +69,32 @@ server.delete("/users/:id", async (req, res) => {
   }
 });
 
+// Inloggningskontroll.
+server.post("/login", async (req, res) => {
+  // Definiera formdata.
+  let username = req.body.username;
+  let psw = req.body.psw;
+  // Jämföra formdata med data som finns i databasen.
+  await Users.findOne({ username: username, psw: psw }, (err, result) => {
+    // Om det finns fel..
+    if (err) {
+      // Returnera 500 meddelande.
+      return res.status(500).send();
+    }
+
+    // Om formdata är fel eller saknas i databasen..
+    if (!result) {
+      // Skicka false.
+      res.send(false);
+    }
+
+    // Om formdata är sanna eller de finns i databasen..
+    if (result) {
+      // Returnera true.
+      res.send(true);
+    }
+  });
+});
+
 const port = 5000;
 server.listen(port, () => console.log(`Servern startar på port ${port}`));
