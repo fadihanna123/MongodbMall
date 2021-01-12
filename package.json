@@ -7,13 +7,18 @@
   "license": "MIT",
   "dependencies": {
     "cors": "*",
-    "express": "*",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "5.11.8",
-    "nodemon": "2.0.6",
-    "open-cli": "^6.0.1",
-    "path": "*"
+    "nodemon": "2.0.6"
   },
   "scripts": {
+    "dev": "tsc -w",
     "start": "open-cli http://localhost:5000/users && nodemon server.js"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.10",
+    "@types/jsonwebtoken": "^8.5.0"
   }
 }
