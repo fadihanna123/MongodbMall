@@ -13,12 +13,13 @@ http://localhost:5000/ <br />
 
 ### 1.2 Mappstruktur
 
-models/<br />
-models/model.js<br />
-README.md<br />
-package.json<br />
-server.js<br />
-yarn.lock<br />
+models/ <br />
+models/model.ts <br />
+README.md <br />
+package.json <br />
+server.ts <br />
+tsconfig.json <br />
+yarn.lock <br />
 
 ### 1.3 Installation:
 
@@ -46,7 +47,7 @@ Här skriver du id som ska raderas från databasen. <br />
 
 ### 1.3 Programmeringsspråk som används i projektet:
 
-Javascript<br />
+Typescript, Javascript<br />
 
 ### 1.4 Ramverk/bibliotek:
 
