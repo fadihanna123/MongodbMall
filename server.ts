@@ -5,8 +5,10 @@ import express, {
 } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import Users from "./models/model";
+import morgan from "morgan";
 import jwt from "jsonwebtoken";
+import { Users } from "./models/model";
+
 const server = express();
 
 mongoose.connect(
@@ -16,7 +18,7 @@ mongoose.connect(
     useUnifiedTopology: true,
     useFindAndModify: false,
   },
-  () => console.log("Connected...")
+  () => console.log("Connected... \n ")
 );
 
 interface IUsers {
@@ -35,6 +37,7 @@ interface Request extends ExpressRequest {
 // Settings
 server.use(express.json());
 server.use(cors());
+server.use(morgan("dev"));
 
 const auth = async (req: Request, res: Response, next: NextFunction) => {
   const Header = req.headers.authorization;
@@ -121,4 +124,4 @@ server.post("/login", async (req: Request, res: Response) => {
 });
 
 const port: number = 5000;
-server.listen(port, () => console.log(`Servern startar på port ${port}`));
+server.listen(port, () => console.log(`Servern startar på port ${port} \n `));
