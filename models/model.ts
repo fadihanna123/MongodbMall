@@ -1,6 +1,7 @@
-import mongoose, { Document, Model, Schema } from "mongoose";
+import mongoose, { Document, Model, Schema, model } from "mongoose";
 
 interface IUsers extends Document {
+  _id: string;
   fullname: string;
   username: string;
   email: string;
@@ -8,7 +9,7 @@ interface IUsers extends Document {
   psw: string;
 }
 
-const UsersSchema = new Schema(
+const UsersSchema: Schema = new Schema(
   {
     fullname: String,
     username: String,
@@ -19,7 +20,7 @@ const UsersSchema = new Schema(
   { collection: "users" }
 );
 
-export const Users: Model<IUsers> = mongoose.model(
+export const Users: Model<IUsers> = model<IUsers>(
   "users",
   UsersSchema,
   "users"
