@@ -26,7 +26,7 @@ yarn.lock
 
 Du behöver skapa Mongodb databas som kallas "users" och collection "users".  
 **Modellen:**  
-`fullname` String
+`fullname` String  
 `username` String  
 `email` String  
 `mobnr` String  
