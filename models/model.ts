@@ -1,13 +1,5 @@
-import mongoose, { Document, Model, Schema, model } from "mongoose";
-
-interface IUsers extends Document {
-  _id: string;
-  fullname: string;
-  username: string;
-  email: string;
-  mobnr: string;
-  psw: string;
-}
+import mongoose, { Model, Schema, model } from "mongoose";
+import { IUsers } from "../typings/List";
 
 const UsersSchema: Schema = new Schema(
   {
