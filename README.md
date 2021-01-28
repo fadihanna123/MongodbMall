@@ -15,6 +15,8 @@ http://localhost:5000/ <br />
 
 models/ <br />
 models/model.ts <br />
+typings/
+typings/List.ts <br />
 README.md <br />
 package.json <br />
 server.ts <br />
@@ -47,8 +49,8 @@ Här skriver du id som ska raderas från databasen. <br />
 
 ### 1.3 Programmeringsspråk som används i projektet:
 
-Typescript, Javascript<br />
+Typescript och Javascript<br />
 
 ### 1.4 Ramverk/bibliotek:
 
-JSON<br />
+JSON <br />
