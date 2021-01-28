@@ -8,6 +8,9 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import jwt from "jsonwebtoken";
 import { Users } from "./models/model";
+import { IUsers, Request } from "./typings/List";
+import morganBody from "morgan-body";
+import bodyParser from "body-parser";
 
 const server = express();
 
@@ -21,23 +24,12 @@ mongoose.connect(
   () => console.log("Connected... \n ")
 );
 
-interface IUsers {
-  _id: string;
-  fullname: string;
-  username: string;
-  email: string;
-  mobnr: string;
-  psw: string;
-}
-
-interface Request extends ExpressRequest {
-  user?: IUsers;
-}
-
 // Settings
 server.use(express.json());
 server.use(cors());
 server.use(morgan("dev"));
+server.use(bodyParser.json());
+morganBody(server);
 
 const auth = async (req: Request, res: Response, next: NextFunction) => {
   const Header = req.headers.authorization;
