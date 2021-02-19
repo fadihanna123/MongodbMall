@@ -3,10 +3,7 @@ import { IUsers } from "../typings/List";
 
 const UsersSchema: Schema = new Schema(
   {
-    fullname: String,
-    username: String,
-    email: String,
-    mobnr: String,
+    uname: String,
     psw: String,
   },
   { collection: "users" }

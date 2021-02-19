@@ -7,10 +7,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import jwt from "jsonwebtoken";
+
 import { Users } from "./models/model";
 import { IUsers, Request } from "./typings/List";
-import morganBody from "morgan-body";
-import bodyParser from "body-parser";
 
 const server = express();
 
@@ -28,8 +27,6 @@ mongoose.connect(
 server.use(express.json());
 server.use(cors());
 server.use(morgan("dev"));
-server.use(bodyParser.json());
-morganBody(server);
 
 const auth = async (req: Request, res: Response, next: NextFunction) => {
   const Header = req.headers.authorization;
@@ -57,7 +54,7 @@ server.post("/users", async (req: Request, res: Response) => {
       res.send(Usrs);
     }
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
   }
 });
 
@@ -91,7 +88,7 @@ server.post("/login", async (req: Request, res: Response) => {
     uname: uname,
   };
 
-  if (req.body) {
+  if (!req.body) {
     res.json({ message: "Du måste fylla in alla rutorna!" });
   } else {
     // Om formdata är fel eller saknas i databasen..
