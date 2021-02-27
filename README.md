@@ -12,15 +12,23 @@ http://localhost:5000/
 
 ### 1.2 Mappstruktur
 
-models/  
-models/model.ts  
-typings/  
-typings/List.ts  
-README.md  
-package.json  
-server.ts  
-tsconfig.json  
-yarn.lock
+api/ <br />
+api/routes.ts <br />
+config/ <br />
+config/database.ts <br />
+config/GlobalSettings.ts <br />
+config/settings.ts <br />
+models/ <br />
+models/model.ts <br />
+typings/ <br />
+typings/List.ts <br />
+.env <br />
+.gitignore <br />
+server.ts <br />
+package.json <br />
+README.md <br />
+tsconfig.json <br />
+yarn.lock <br />
 
 ### 1.3 Installation:
 
