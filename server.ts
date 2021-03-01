@@ -5,7 +5,8 @@ import { IUsers, Request } from "./typings/List";
 import { server } from "./config/GlobalSettings";
 import "./config/database";
 import "./config/settings";
-import routes from "./api/routes";
+import "./api/AuthRoutes";
+import UserRoutes from "./api/UserRoutes";
 
 const auth = async (req: Request, res: Response, next: NextFunction) => {
   const Header = req.headers.authorization;
@@ -20,7 +21,7 @@ const auth = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-server.use(routes);
+server.use(UserRoutes);
 
 const port: number = 5000;
 server.listen(port, () => console.log(`Servern startar på port ${port} \n `));
