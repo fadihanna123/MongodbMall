@@ -2,7 +2,6 @@
   "name": "reactapi",
   "version": "1.0.0",
   "description": "Simple ReactAPI",
-  "main": "server.js",
   "author": "Fadi Hanna",
   "license": "MIT",
   "dependencies": {
