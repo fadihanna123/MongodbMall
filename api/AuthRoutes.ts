@@ -1,8 +1,21 @@
-import { Request, Response } from "express";
+import { Request as ExpressRequest, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-
 import { router } from "../config/GlobalSettings";
 import { Users } from "../models/model";
+import { IUsers, Request } from "../typings/List";
+
+const auth = async (req: Request, res: Response, next: NextFunction) => {
+  const Header = req.headers.authorization;
+  const token = Header && Header.split(" ")?.[1];
+  if (!token) return res.sendStatus(401);
+  try {
+    const user = jwt.verify(token, <string>process.env.Token);
+    req.user = user as IUsers;
+    next();
+  } catch (err) {
+    return res.sendStatus(403);
+  }
+};
 
 // Inloggningskontroll.
 router.post("/login", async (req: Request, res: Response) => {
@@ -25,7 +38,7 @@ router.post("/login", async (req: Request, res: Response) => {
       // Om formdata är sanna eller de finns i databasen..
       if (result) {
         // Returnera accesToken.
-        const accessToken = jwt.sign(userObject, "X");
+        const accessToken = jwt.sign(userObject, <string>process.env.Token);
         res.json({ accessToken: accessToken, author: uname });
       }
     } catch (err) {
