@@ -1,6 +1,7 @@
-import express from "express";
 import cors from "cors";
+import express from "express";
 import morgan from "morgan";
+
 import { server } from "../config/GlobalSettings";
 
 // Settings

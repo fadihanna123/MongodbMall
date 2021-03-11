@@ -1,4 +1,5 @@
-import mongoose, { Model, Schema, model } from "mongoose";
+import mongoose, { Model, model, Schema } from "mongoose";
+
 import { IUsers } from "../typings/List";
 
 const UsersSchema: Schema = new Schema(

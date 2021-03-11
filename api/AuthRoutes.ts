@@ -1,5 +1,6 @@
-import { Request as ExpressRequest, Response, NextFunction } from "express";
+import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
+
 import { router } from "../config/GlobalSettings";
 import { Users } from "../models/model";
 import { IUsers, Request } from "../typings/List";
