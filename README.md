@@ -13,15 +13,18 @@ http://localhost:5000/
 ### 1.2 Mappstruktur
 
 api/ <br />
+api/index.ts <br />
 api/routes.ts <br />
 config/ <br />
+config/index.ts <br />
 config/database.ts <br />
 config/GlobalSettings.ts <br />
 config/settings.ts <br />
 models/ <br />
+models/index.ts <br />
 models/model.ts <br />
 typings/ <br />
-typings/List.ts <br />
+typings/index.ts <br />
 .env <br />
 .gitignore <br />
 server.ts <br />
