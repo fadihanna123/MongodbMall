@@ -2,7 +2,7 @@ import cors from "cors";
 import express from "express";
 import morgan from "morgan";
 
-import { server } from "../config/GlobalSettings";
+import { server } from "../config";
 
 // Settings
 server.use(cors());

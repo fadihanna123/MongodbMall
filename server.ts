@@ -1,9 +1,8 @@
-import "./api/AuthRoutes";
-import "./config/database";
-import "./config/settings";
+import "./api";
+import "./config";
 
 import UserRoutes from "./api/UserRoutes";
-import { server } from "./config/GlobalSettings";
+import { server } from "./config";
 
 server.use(UserRoutes);
 

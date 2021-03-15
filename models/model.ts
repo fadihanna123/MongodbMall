@@ -1,6 +1,6 @@
 import mongoose, { Model, model, Schema } from "mongoose";
 
-import { IUsers } from "../typings/List";
+import { IUsers } from "../typings";
 
 const UsersSchema: Schema = new Schema(
   {

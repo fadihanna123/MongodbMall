@@ -1,11 +1,15 @@
 import { Request, Response } from "express";
 
-import { router } from "../config/GlobalSettings";
-import { Users } from "../models/model";
+import { router } from "../config";
+import { Users } from "../models";
 
 router.get("/users", async (req: Request, res: Response) => {
-  const getlist = await Users.find({});
-  res.send(getlist);
+  try {
+    const getlist = await Users.find({});
+    res.send(getlist);
+  } catch (err) {
+    console.log(err.message);
+  }
 });
 
 router.post("/users", async (req: Request, res: Response) => {

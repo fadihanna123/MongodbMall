@@ -1,9 +1,9 @@
 import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
 
-import { router } from "../config/GlobalSettings";
-import { Users } from "../models/model";
-import { IUsers, Request } from "../typings/List";
+import { router } from "../config";
+import { Users } from "../models";
+import { IUsers, Request } from "../typings";
 
 const auth = async (req: Request, res: Response, next: NextFunction) => {
   const Header = req.headers.authorization;
